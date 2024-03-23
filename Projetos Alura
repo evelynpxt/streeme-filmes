@@ -1,0 +1,352 @@
+public class Filme {
+    String nome;
+    int anoDeLancamento;
+    boolean incluidoNoPlano;
+    double avaliacao;
+    int totalDeAvaliacoes;
+    int duracaoEmMinutos;
+}
+
+public class Principal {
+    public static void main(String[] args) {
+        Filme meuFilme = new Filme();
+        meuFilme.nome = "O poderoso chefão";
+        meuFilme.anoDeLancamento = 1970;
+        meuFilme.duracaoEmMinutos = 180;
+
+        System.out.println(meuFilme.nome);
+        System.out.println(meuFilme.anoDeLancamento);
+
+Filme meuFilme = new Filme();
+meuFilme.nome = "O poderoso chefão";
+meuFilme.anoDeLancamento = 1970;
+meuFilme.duracaoEmMinutos = 180;
+
+System.out.println(meuFilme.nome);
+System.out.println(meuFilme.anoDeLancamento);
+Filme.nome = "Top Gun"
+
+
+
+public class Filme {
+    String nome;
+    int anoDeLancamento;
+    boolean incluidoNoPlano;
+    double avaliacao;
+    int totalDeAvaliacoes;
+    int duracaoEmMinutos; 
+
+        void exibeFichaTecnica(){
+            System.out.println("Nome do filme:" + nome);
+            System.out.println("Ano de lançamento:" + anoDeLancamento);
+        }
+}
+
+public class Principal {
+    public static void main(String[] args) {
+        Filme meuFilme = new Filme();
+        meuFilme.nome = "O poderoso chefão";
+        meuFilme.anoDeLancamento = 1970;
+        meuFilme.duracaoEmMinutos = 180;
+
+                meuFilme.exibeFichaTecnica();
+                meuFilme.avalia(8);
+                meuFilme.avalia(5);
+                meuFilme.avalia(10);
+
+                System.out.println(meuFilme.somaDasAvaliacoes);
+                System.out.println(meuFilme.totalDeAvaliacoes);
+                System.out.println(meuFilme.pegaMedia());
+    }
+}
+
+
+    }
+}
+
+public class Filme {
+
+    String nome;
+    int anoDeLancamento;
+    int duracaoEmMinutos;
+    boolean incluidoNoPlano;
+    double somaDasAvaliacoes;
+    int totalDeAvaliacoes;
+
+    void exibeFichaTecnica() {
+        System.out.println(“Nome do filme: “ +nome);
+        System.out.println(“Ano de lançamento: “ +anoDeLancamento);
+        System.out.println(“Duração em minutos: “ +duracaoEmMinutos);
+        System.out.println(“Incluído no plano: “ +incluidoNoPlano);
+    }
+
+    void avalia(double nota) {
+        somaDasAvaliacoes += nota;
+        totalDeAvaliacoes++;
+    }
+
+    double pegaMedia() {
+        return somaDasAvaliacoes / totalDeAvaliacoes;
+    }
+
+}
+
+
+
+public class Principal {
+
+    public static void main(String[] args) {
+        Filme favorito = new Filme();
+
+        favorito.nome = “The Matrix”;
+        favorito.anoDeLancamento = 1999;
+        favorito.duracaoEmMinutos = 135;
+        favorito.incluidoNoPlano = true;
+
+        favorito.exibeFichaTecnica();
+        favorito.avalia(9);
+        favorito.avalia(8);
+        favorito.avalia(9);
+
+        System.out.println(“Média de avaliações do filme: ” +favorito.pegaMedia());
+    }
+
+}
+
+DESAFIO
+
+// Classe Pessoa
+class Pessoa {
+    // Método para exibir "Olá, mundo!" no console
+    void saudacao() {
+        System.out.println("Olá, mundo!");
+    }
+}
+
+// Classe Calculadora
+class Calculadora {
+    // Método para retornar o dobro de um número
+    int calcularDobro(int numero) {
+        return numero * 2;
+    }
+}
+
+// Classe Musica
+class Musica {
+    // Atributos
+    String titulo;
+    String artista;
+    int anoLancamento;
+    double avaliacao;
+    int numAvaliacoes;
+
+    // Método para exibir a ficha técnica da música
+    void exibirFichaTecnica() {
+        System.out.println("Título: " + titulo);
+        System.out.println("Artista: " + artista);
+        System.out.println("Ano de Lançamento: " + anoLancamento);
+        System.out.println("Avaliação: " + avaliacao);
+        System.out.println("Número de Avaliações: " + numAvaliacoes);
+    }
+
+    // Método para avaliar a música
+    void avaliarMusica(double avaliacao) {
+        this.avaliacao = (this.avaliacao * this.numAvaliacoes + avaliacao) / (this.numAvaliacoes + 1);
+        this.numAvaliacoes++;
+    }
+
+    // Método para calcular a média de avaliações
+    double calcularMediaAvaliacoes() {
+        return avaliacao;
+    }
+}
+
+// Classe Carro
+class Carro {
+    // Atributos
+    String modelo;
+    int ano;
+    String cor;
+
+    // Método para exibir a ficha técnica do carro
+    void exibirFichaTecnica() {
+        System.out.println("Modelo: " + modelo);
+        System.out.println("Ano: " + ano);
+        System.out.println("Cor: " + cor);
+    }
+
+    // Método para calcular a idade do carro
+    int calcularIdade(int anoAtual) {
+        return anoAtual - ano;
+    }
+}
+
+// Classe Aluno
+class Aluno {
+    // Atributos
+    String nome;
+    int idade;
+
+    // Método para exibir informações do aluno
+    void exibirInformacoes() {
+        System.out.println("Nome: " + nome);
+        System.out.println("Idade: " + idade);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Criando instância da classe Aluno
+        Aluno aluno = new Aluno();
+        
+        // Atribuindo valores aos atributos do aluno
+        aluno.nome = "João";
+        aluno.idade = 20;
+        
+        // Utilizando método para exibir informações do aluno
+        aluno.exibirInformacoes();
+    }
+}
+
+
+
+//Classe Pessoa
+public class Pessoa {
+
+     void saudacao() {
+        System.out.println("Olá, mundo!");
+    }
+}
+
+//Classe Principal
+public class Principal {
+
+    public static void main(String[] args) {
+    
+        Pessoa pessoa = new Pessoa();
+        pessoa.saudacao();
+    }
+}
+
+
+//Classe Calculadora
+public class Calculadora {
+
+    public int dobrarNumero(int numero) {
+        return numero * 2;
+    }
+}
+
+//Classe Principal
+public class Principal {
+
+    public static void main(String[] args) {
+    
+        Calculadora calculadora = new Calculadora();
+        int resultado = calculadora.dobrarNumero(5);
+        System.out.println(resultado);
+    }
+}
+
+
+//Classe Musica
+public class Musica {
+    String titulo;
+    String artista;
+    int anoLancamento;
+    double somaDasAvaliacoes;
+    int numAvaliacoes;
+
+    void exibeFichaTecnica() {
+        System.out.println("Título da música: " + titulo);
+        System.out.println("Artista: " + artista);
+        System.out.println("Ano de lançamento: " + anoLancamento);
+    }
+
+    void avalia(double nota) {
+        somaDasAvaliacoes += nota;
+        numAvaliacoes++;
+    }
+
+    double pegaMedia() {
+        return somaDasAvaliacoes / numAvaliacoes;
+    }
+}
+
+//Classe Principal
+public class Principal {
+    public static void main(String[] args) {
+        Musica minhaMusica = new Musica();
+
+        minhaMusica.titulo = "Nome da Música";
+        minhaMusica.artista = "Nome do Artista";
+        minhaMusica.anoLancamento = 2023;
+
+        minhaMusica.exibeFichaTecnica();
+
+        minhaMusica.avalia(4.5);
+        minhaMusica.avalia(3.8);
+        minhaMusica.avalia(5.0);
+
+        double mediaAvaliacoes = minhaMusica.pegaMedia();
+        System.out.println("Média das avaliações: " + mediaAvaliacoes);
+    }
+}
+
+
+//Classe Carro
+public class Carro {
+    String modelo;
+    int ano;
+    String cor;
+
+    void exibeFichaTecnica() {
+        System.out.println("Modelo: " + modelo);
+        System.out.println("Ano: " + ano);
+        System.out.println("Cor: " + cor);
+    }
+
+    int calculaIdade() {
+        return 2023 - ano;
+    }
+}
+
+//Classe Principal
+public class Principal {
+    public static void main(String[] args) {
+        Carro meuCarro = new Carro();
+        meuCarro.modelo = "Gol";
+        meuCarro.ano = 2023;
+        meuCarro.cor = "Preto";
+
+        // Exibir ficha técnica
+        meuCarro.exibeFichaTecnica();
+
+        // Calcular idade do carro
+        System.out.println("Idade do carro: " + meuCarro.calculaIdade() + " anos");
+    }
+}
+
+
+//Classe Aluno
+public class Aluno {
+    String nome;
+    int idade;
+
+    void exibeInformacoes() {
+        System.out.println("Nome do aluno: " + nome);
+        System.out.println("Idade do aluno: " + idade);
+    }
+}
+
+//Classe Principal
+public class Principal {
+    public static void main(String[] args) {
+        Aluno meuAluno = new Aluno();
+        meuAluno.nome = "Akemi";
+        meuAluno.idade = 18;
+
+        meuAluno.exibeInformacoes();
+    }
+}
+
